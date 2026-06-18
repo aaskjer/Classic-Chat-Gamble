@@ -40,10 +40,12 @@ Viewers trigger the game by using the configured chat command (e.g. `!gamble`) o
 
 When `Only Channel Points` is enabled, the chat command is effectively disabled — only viewers who redeem the configured Channel Point reward can play. Four bet modes are available:
 
-- **Cost** — The reward's point cost is the bet
-- **Input** — The viewer types their bet into the reward's text field
-- **Fixed** — Every redemption bets a fixed configured amount
-- **Free** — All redemptions play for free regardless of cost
+| Option | Info |
+|---------|---------|
+| **Cost** | The reward's point cost is the bet |
+| **Input** | The viewer types their bet into the reward's text field |
+| **Fixed** | Every redemption bets a fixed configured amount |
+| **Free** | All redemptions play for free regardless of cost |
 
 ---
 
