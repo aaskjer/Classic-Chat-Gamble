@@ -11,7 +11,7 @@ Click on `Import` and `Yes` on both following popup messages.
 
 <p align="center"><img alt="grafik" src="https://github.com/user-attachments/assets/7839f6b3-0b32-4b3d-8f11-e03e5589b16c"></p> 
 
-Enable all commands in the `Commands` tab of streamer.bot.[CCG] - Settings
+Enable all commands in the `Commands` tab of streamer.bot.
 
 # Configure Game
 
