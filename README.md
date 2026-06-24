@@ -66,7 +66,7 @@ When `Only Channel Points` is enabled, the chat command is effectively disabled 
 
 [aaskjer on Twitch](https://twitch.tv/aaskjer)
 
-[Better Stream Announcements on SB Discord](https://discord.com/channels/834650675224248362/1446874050310836396/1446874050310836396)
+[Classic Chat Gamble on SB Discord](https://discord.com/channels/834650675224248362/1446874050310836396/1446874050310836396)
 
 [Streamer.bot](https://streamer.bot) / [nate1280](https://www.patreon.com/c/nate1280/home)
 
