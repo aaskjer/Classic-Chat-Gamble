@@ -65,7 +65,7 @@ Message is empty, `messages.json` is corrupt/missing or currently there is no co
 
 # Multi-Platform
 ### Which platforms are supported?
-Twitch, YouTube, Kick, Trovo
+Twitch, YouTube, Kick
 ### Can I run the game on multiple platforms simultaneously?
 Yes.
 ### Do cooldowns apply across platforms?
