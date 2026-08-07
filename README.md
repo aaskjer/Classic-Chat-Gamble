@@ -1,13 +1,12 @@
 <p align="center"><img src="https://github.com/aaskjer/Classic-Chat-Gamble/blob/main/Assets/CCG/Classic-Chat-Gamble-Logo.png?raw=true" alt="BsA banner" width="400" height="400"></p>
 
-Most classic chat game built for streamer.bot, supporting twitch, kick, trovo and youtube.
+Most classic chat game built for streamer.bot, supporting twitch, kick and youtube.
 
 
 ---
 
 # Overview
 
-- Works on Twitch, YouTube, Trovo, and Kick  
 - Viewers can bet with numbers, keywords (`all`, `half`, `quarter`, `third`, `random`),  
   percentages (`50%`), or shorthand notation (`10k`, `2.5m`, `1b`)  
 - Configurable jackpot chance and multiplier on top of the standard win calculation.
