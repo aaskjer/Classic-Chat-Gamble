@@ -35,7 +35,9 @@ That's on purpose: with an empty balance there's nothing to bet, so `!gamble` is
 ### Can viewers bet more than they have?
 No. A bet is limited by the viewer's balance and by the Minimum and Maximum bet.
 ### What does `!gambleaddict` do?
-It puts a viewer on the addicted list (`!gambleaddict add <name>`) or takes them off (`!gambleaddict remove <name>`). Addicted viewers win less, by the Addicted cut on the Game page, and get messages of their own.
+It puts a viewer on the addicted list (`!gambleaddict add <name>`) or takes them off (`!gambleaddict remove <name>`). Only moderators and the broadcaster can use it. Addicted viewers win less, by the Addicted cut on the Game page, and get messages of their own.
+### Who can use the moderator commands?
+`!SetFreeGamble`, `!EndFreeGamble` and `!gambleaddict` allow only the `Moderators` group, and the broadcaster can always use them. Change it in each command's permissions in Streamer.bot.
 ### How does the calculation work?
 
 | Outcome | When | Payout |
@@ -62,7 +64,7 @@ It didn't end in a gamble: the viewer is blocked, a cooldown is running, or the 
 
 # Free Game Mode
 ### How do I start and stop Free Game Mode?
-`!SetFreeGamble` starts it, `!EndFreeGamble` stops it.
+`!SetFreeGamble` starts it, `!EndFreeGamble` stops it. Both are for moderators and the broadcaster.
 ### Do viewers still earn points during Free Game Mode?
 No. Nobody wins or loses points while it's on, channel point redemptions included.
 ### Why aren't viewers being told about Free Game Mode?
