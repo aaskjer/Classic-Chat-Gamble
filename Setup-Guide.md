@@ -12,12 +12,14 @@ Click `Import`, then `Yes` in both popups that follow.
 
 The four commands arrive switched off. Enable them in the `Commands` tab of Streamer.bot, in the group `[CCG] - Classic Chat Gamble`:
 
-| Command | What it does |
-|---------|--------------|
-| `!gamble` (or `!gambel`) | Plays a round, with the amount the viewer names or the Default bet |
-| `!SetFreeGamble` | Turns Free Game Mode on |
-| `!EndFreeGamble` | Turns Free Game Mode off |
-| `!gambleaddict` | Puts a viewer on the addicted list (`add`) or takes them off (`remove`) |
+| Command | Who | What it does |
+|---------|-----|--------------|
+| `!gamble` (or `!gambel`) | Everyone | Plays a round, with the amount the viewer names or the Default bet |
+| `!SetFreeGamble` | Moderators | Turns Free Game Mode on |
+| `!EndFreeGamble` | Moderators | Turns Free Game Mode off |
+| `!gambleaddict` | Moderators | Puts a viewer on the addicted list (`add`) or takes them off (`remove`) |
+
+The moderator commands come with `Moderators` as their only allowed group, and you as the broadcaster can always use them. To change who may, edit the command's permissions in Streamer.bot.
 
 Twitch, YouTube and Kick all play. To leave a platform out, open the command and untick its source, for example `Kick Message`.
 
