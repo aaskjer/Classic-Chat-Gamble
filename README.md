@@ -23,12 +23,6 @@
   <a href="https://github.com/aaskjer/Classic-Chat-Gamble/blob/main/Import-String.md"><b>Import string</b></a>
 </p>
 
-<p align="center">
-  <img alt="Game page of the settings window" src="Assets/setup-guide/game.png" width="380">
-  &nbsp;
-  <img alt="Messages page of the settings window" src="Assets/setup-guide/messages.png" width="380">
-</p>
-
 ---
 
 ## ✨ Features
@@ -83,17 +77,6 @@ With `Channel points` picked, the chat command is off on Twitch, and only viewer
 | **Free** | Nothing: every redemption plays for free |
 
 A redemption that doesn't end in a gamble is refunded.
-
----
-
-## 🖼️ Settings Window
-
-<table>
-  <tr>
-    <td align="center"><img alt="Access page with channel points" src="Assets/setup-guide/access--channel-points.png" width="360"><br><sub>Access: how viewers play, cooldowns, blocked and addicted viewers</sub></td>
-    <td align="center"><img alt="Log page" src="Assets/setup-guide/log.png" width="360"><br><sub>Log: every gamble, day by day</sub></td>
-  </tr>
-</table>
 
 ---
 
