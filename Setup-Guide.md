@@ -1,60 +1,93 @@
 # Import
-<p align="center"><img alt="grafik" src="https://github.com/user-attachments/assets/2c17f5a0-15f3-4396-a277-a66638017fb3"> </p> 
+<p align="center"><img alt="Import in Streamer.bot" src="https://github.com/user-attachments/assets/2c17f5a0-15f3-4396-a277-a66638017fb3"></p>
 
-Click on `Import` in [streamer.bot](https://streamer.bot/) and drag the [ClassicChatGamble.sb](https://github.com/aaskjer/Classic-Chat-Gamble/releases) file into the window or copy paste the [import string](https://github.com/aaskjer/Classic-Chat-Gamble/blob/main/Import-String.md).
+In [streamer.bot](https://streamer.bot/), click `Import` and drag the [ClassicChatGamble.sb](https://github.com/aaskjer/Classic-Chat-Gamble/releases) file into the window, or paste the [import string](https://github.com/aaskjer/Classic-Chat-Gamble/blob/main/Import-String.md).
 
-<p align="center"><img alt="grafik" src="https://github.com/user-attachments/assets/ade12d9e-f2a7-4f0c-ab56-2cfcfc7d39b7"></p> 
+<p align="center"><img alt="Import window" src="https://github.com/user-attachments/assets/ade12d9e-f2a7-4f0c-ab56-2cfcfc7d39b7"></p>
 
-Click on `Import` and `Yes` on both following popup messages.
+Click `Import`, then `Yes` in both popups that follow.
 
-## Enable Commands
+## Enable the commands
+<p align="center"><img alt="Enable the commands" src="https://github.com/user-attachments/assets/7839f6b3-0b32-4b3d-8f11-e03e5589b16c"></p>
 
-<p align="center"><img alt="grafik" src="https://github.com/user-attachments/assets/7839f6b3-0b32-4b3d-8f11-e03e5589b16c"></p> 
+The four commands arrive switched off. Enable them in the `Commands` tab of Streamer.bot, in the group `[CCG] - Classic Chat Gamble`:
 
-Enable all commands in the `Commands` tab of streamer.bot.
+| Command | What it does |
+|---------|--------------|
+| `!gamble` (or `!gambel`) | Plays a round, with the amount the viewer names or the Default bet |
+| `!SetFreeGamble` | Turns Free Game Mode on |
+| `!EndFreeGamble` | Turns Free Game Mode off |
+| `!gambleaddict` | Puts a viewer on the addicted list (`add`) or takes them off (`remove`) |
 
-# Configure Game
+Twitch, YouTube and Kick all play. To leave a platform out, open the command and untick its source, for example `Kick Message`.
 
-<p align="center"><img alt="grafik" src="https://github.com/user-attachments/assets/ad03421b-d887-4e36-91bd-d56edefdb9cd"></p> 
+# Setup
+<p align="center"><img alt="Open the settings" src="https://github.com/user-attachments/assets/ad03421b-d887-4e36-91bd-d56edefdb9cd"></p>
 
-Go to `Actions` tab, click on the action `[CCG] - Settings` and right-click on the `Test` trigger and run `Test Trigger` to open the CCG GUI.
+In the `Actions` tab, select `[CCG] - Settings`, right-click the `Test` trigger and click `Test Trigger`. The settings window opens.
 
-<p align="center"><img alt="grafik" src="https://github.com/user-attachments/assets/01361561-1f87-4460-9535-a2ff24e712bd"></p> 
+Hover over an option for a tooltip with the details. `Save` or `Ctrl+S` keeps your changes, `Save & Exit` also closes the window, and `Ctrl+1` to `Ctrl+5` switch between the pages. Changes you haven't saved yet show up in orange at the bottom. The two buttons at the bottom left switch between dark and light and reset everything to the defaults. The strip at the top tells you whether Free Game Mode is on and how viewers play, and a red `Update` pill appears there when a new version is out.
 
-`General` tab inerhit all options for commands, platforms and general appearance in chat.
+## Game
+<p align="center"><img alt="Game page" src="Assets/setup-guide/game.png"></p>
 
-<p align="center"><img alt="grafik" src="https://github.com/user-attachments/assets/af0eb185-b3b5-43b8-ba55-f691c5099c12"></p> 
+- **Fairness**: one slider sets the odds, from `Strict`, where the house wins, to `Classic`, the defaults with rare, huge jackpots. The bar shows the chance of a jackpot, a win and a loss, and the number above it what a bet of 100 brings back on average. Type your own numbers below the slider and it moves to `Custom`.
+- **Bets and points**: Default, Minimum and Maximum bet, the points variable and the name chat uses for your points. Currency Core by StreamUP and LOYALTY POINTS by tawmae are detected on their own.
+- **Payouts**: the Subscriber and VIP boosts, both Twitch only, and the cut for addicted viewers.
+- **Try a bet**: pick a bet and who plays, then click `Roll` to see exactly what chat would get. Nothing is saved, and nobody's points change.
 
-`Game` tab gives your a lot of possibilities to modify the game and features a live preview based on your settings, so you can nerf the game for addicts or adjust it for events.
+## Access
+<p align="center"><img alt="Access page" src="Assets/setup-guide/access.png"></p>
 
-<p align="center"><img alt="grafik" src="https://github.com/user-attachments/assets/e820c300-b598-48fe-bac3-26213a576747"></p> 
+- **How viewers play**: with `!gamble` in chat, or on Twitch with a channel point reward.
+- **Cooldown in seconds**: one for everyone, one per viewer. Saving writes them straight into the `!gamble` command.
+- **Blocked and addicted viewers and groups**: type a name and press `Enter`; `×` removes it again. Blocked viewers can't play. Addicted viewers win less and get messages of their own, and `!gambleaddict` adds them from chat too.
 
-`Messages` gives you the chance to modify any message in the game.
+### Twitch Channel Points
+<p align="center"><img alt="Channel points" src="Assets/setup-guide/access--channel-points.png"></p>
 
-`Other Modules` contains `Twitch Channel Points` and the `Action Log`
+1. Pick `Channel points`. `!gamble` is then off on Twitch, while YouTube and Kick keep using it.
+2. Paste the ID of your reward into `Reward ID`; `Find my reward ID` helps you look it up. Without one, no redemption starts a gamble.
+3. Pick what is bet:
+   - `Reward cost`: the reward's price is the bet. A loss doesn't touch the viewer's points, and a win is paid in points.
+   - `Typed amount`: viewers type a bet into the reward. It's paid from their own points, just like `!gamble`.
+   - `Fixed`: every redemption bets the amount you set.
+   - `Free`: nothing is won or lost.
 
-<p align="center"><img alt="grafik" src="https://github.com/user-attachments/assets/e27a72ec-44bd-49ab-9941-4eac90430336"></p> 
+A redemption that doesn't end in a gamble is refunded, as long as the reward doesn't skip the reward requests queue.
 
-`Twitch Channel Points` is twitch only (off by default). If enabled, the normal `!gamble` chat command is disabled for twitch.
-`Bet Mode` let you choose of different ways to use channel points to trigger the game. Check out the description in the GUI for each mode.
-Note: while `Twitch Channel Points` is active, other platforms can still play.
+## Messages
+<p align="center"><img alt="Messages page" src="Assets/setup-guide/messages.png"></p>
 
-<p align="center"><img alt="grafik" src="https://github.com/user-attachments/assets/b1f384b3-227d-41f4-881c-3d8919d41394"></p> 
+Edit any message the game sends, or translate it into your language. Pick one from the list and click a placeholder to insert it; the chat preview shows the result the way chat will read it. `Numbers` sets how chat writes numbers, like 12.345 or 12,345.
 
-`Action Log` shows you exactly the outcome of a gamble game per user. You can see easily who won, loss, hit the jackpot. Filter per platform and other details are possible.
+Below the preview you choose the sender, your bot account or your own, and `Send as /me`, which only exists on Twitch. Game messages and cooldown messages are set separately.
 
-## Math Calculation
+## Log
+<p align="center"><img alt="Log page" src="Assets/setup-guide/log.png"></p>
 
-| Outcome | Trigger | Payout |
-|---------|---------|--------|
-| 🎰 **Jackpot** | Roll ≤ Jackpot % | `bet × random(RndMin–RndMax) × JackpotMultiplier` |
-| 🎉 **Win** | Roll ≤ Win % | `bet × random(RndMin–RndMax)` |
-| ❌ **Loss** | Remaining % | `-bet` |
+Every gamble and refund, day by day. Search for names, platforms or amounts, filter by result or date, and click a line to read all of it. `Write a log file per day` turns logging on or off.
 
-# Other Features
+## About
+<p align="center"><img alt="About page" src="Assets/setup-guide/about.png"></p>
+
+The version, links, and the points systems supported out of the box.
+
+# How a gamble is decided
+
+| Outcome | When | Payout |
+|---------|------|--------|
+| 🎰 **Jackpot** | Roll ≤ Jackpot % | `bet × random(Min×–Max×) × Jackpot×` |
+| 🎉 **Win** | Roll ≤ Win %, on top of the jackpot chance | `bet × random(Min×–Max×)` |
+| ❌ **Loss** | Everything else | `-bet` |
+
+Wins and jackpots are paid on top of the bet. The Subscriber and VIP boosts raise them, and the Addicted cut lowers them.
+
+# Other features
 
 ## Arguments
-Arguments available outside of the game, handy if you want to trigger further actions on certain situations.
+After every gamble the game keeps its result, which comes in handy for further actions. Run `GetLastGambleResult` with an `Execute C# Method` sub-action to get these arguments:
+
 | Argument | Value |
 |----------|-------|
 | `gambleOutcome` | `WIN`, `LOSS`, or `JACKPOT` |
@@ -65,12 +98,15 @@ Arguments available outside of the game, handy if you want to trigger further ac
 | `gambleCurrency` | Currency name |
 | `gambleOutcomeMessage` | Pre-formatted result summary |
 
-<p align="center"><img alt="grafik" src="https://github.com/user-attachments/assets/f0d90ae1-4c89-4ef1-a67e-b67142354678"></p> 
+<p align="center"><img alt="Arguments" src="https://github.com/user-attachments/assets/f0d90ae1-4c89-4ef1-a67e-b67142354678"></p>
 
-## Free Mode
-You have various ways to enable the `Free Mode`. You can set `Default Bet` to `0` or use chat commands:
+The custom triggers `CCG: Gamble Win`, `CCG: Gamble Loss`, `CCG: Gamble Jackpot`, `CCG: Free Game Start` and `CCG: Free Game End` start your own actions at the right moment. A gamble's triggers fire once its result is stored, so `GetLastGambleResult` already returns that gamble.
 
-| Command | Info |
-|----------|-------|
-| `!SetFreeMode` | Enable the free mode and validate the action with a message.<br>Every user now will get a one time only message to inform about the mode being active | 
-| `!EndFreeMode` | Restores the normal gamble mode and validates it with a message. |
+## Free Game Mode
+`!SetFreeGamble` turns it on and `!EndFreeGamble` turns it off again. While it's on, nobody pays or wins points, channel point redemptions included, and each viewer gets a one-time notice with their first gamble. The start and end messages go to the chat the command was used in.
+
+A Default bet of 0 doesn't make the game free: it means viewers always have to name an amount.
+
+---
+
+[Frequently Asked Questions](https://github.com/aaskjer/Classic-Chat-Gamble/blob/main/FAQ.md) · [Report an issue](https://github.com/aaskjer/Classic-Chat-Gamble/issues)
