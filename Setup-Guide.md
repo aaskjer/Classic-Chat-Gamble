@@ -68,7 +68,7 @@ Below the preview you choose the sender, your bot account or your own, and `Send
 ## Log
 <p align="center"><img alt="Log page" src="Assets/setup-guide/log.png"></p>
 
-Every gamble and refund, day by day. Search for names, platforms or amounts, filter by result or date, and click a line to read all of it. `Write a log file per day` turns logging on or off.
+Every gamble and refund, day by day. Search for names or amounts, filter by result, platform or date, and click a line to read all of it. `Write a log file per day` turns logging on or off.
 
 ## About
 <p align="center"><img alt="About page" src="Assets/setup-guide/about.png"></p>
