@@ -92,6 +92,7 @@ A redemption that doesn't end in a gamble is refunded.
 ## ❤️ Credits & Links
 
 - [aaskjer on Twitch](https://twitch.tv/aaskjer)
+- [aaskjer.github.io](https://aaskjer.github.io/)
 - [Classic Chat Gamble on SB Discord](https://discord.com/channels/834650675224248362/1446874050310836396/1446874050310836396)
 - [Streamer.bot](https://streamer.bot) / [nate1280](https://www.patreon.com/c/nate1280/home)
 - YOU ♡
