@@ -4,11 +4,18 @@ Import the [import string](https://github.com/aaskjer/Classic-Chat-Gamble/blob/m
 ### Which version of Streamer.bot is required?
 The latest public version is always recommended.
 ### Where are the config files?
-In your Streamer.bot folder under `Chat Games\Classic Chat Gamble`: `configs.json` holds the settings, `messages.json` the chat messages.
+In your Streamer.bot folder under `Chat Games\Classic Chat Gamble`: `configs.json` holds the settings, `messages.json` the chat messages, `uiframework.layout.json` your layout of the window (theme, renamed or hidden pages and fields). The window itself is `UIFramework\lib\<version>\UIFramework.dll` next to Streamer.bot, downloaded on first open.
+### What is UIFramework.dll, and why does the window want to download something?
+The settings window is no longer part of the import. It lives in [UIFramework for streamer.bot](https://github.com/aaskjer/UIFramework-Streamer.bot), one window shared by all of these chat games, so a fix or a new feature there reaches every game at once. The `[CCG] - Settings` action only loads that DLL and hands it the game's settings table.
+The first open asks before fetching anything. `Yes` downloads the file from the UIFramework releases, checks it against the SHA-256 published next to it and puts it in `UIFramework\lib\<version>\` under your Streamer.bot folder. `No` opens that folder so you can place the file yourself. Later releases are offered the same way; `Cancel` skips one, and `"autoUpdate": false` in `uiframework.layout.json` stops the check altogether. If the log says `UIFramework.dll was not found`, open the window again and answer `Yes`, or put the DLL from the [releases](https://github.com/aaskjer/UIFramework-Streamer.bot/releases) into that folder by hand.
+### Can I rearrange the window?
+Yes. The pencil at the bottom left switches to the customise mode: drag a field onto another to reorder it, onto a page in the rail to move it there, right-click for *Rename*, *Hide* and *Move to page*; pages can be renamed, reordered, given another icon or hidden the same way. The bar on top picks the accent colour, and *Reset layout* puts everything back. It all lives in `uiframework.layout.json`, so an update of the game never undoes it. A hidden field keeps its value.
 ### How do I reset all settings to default?
-Click the reset button at the bottom left of the settings window and confirm, or delete `configs.json`.
+The circular arrow at the bottom left resets every page, the half arrow only the page in front of you; both ask first and write nothing until you save. Deleting `configs.json` works too.
 ### What if a settings file is damaged?
-The settings window still opens and tells you which file it couldn't read. That file shows its defaults and is kept next to it as a `.broken` copy, and saving writes a fresh one.
+The settings window still opens: a damaged `configs.json` falls back to the `.bak` beside it, or to the defaults, and is kept as a `.broken` copy; saving writes a fresh one. The game does the same, so a gamble never fails on a damaged file.
+### I updated and configs.json looks different.
+Its keys are camelCase since 25.0.0 (`freeGame`, `minBet`, `jackpotPercent`). Your old file is read through aliases, and the first save writes the new names; nothing is lost. `messages.json` is unchanged.
 
 # Points & Currency
 ### Which loyalty point systems are supported?
@@ -17,7 +24,7 @@ Any custom points system works. [Currency Core by StreamUP](https://streamup.tip
 On the Game page of the settings window, enter its variable under `Points variable`. The default is `points`.
 ### Why aren't viewers losing or gaining points?
 Check these first:
-- Free Game Mode is on. The strip at the top of the settings window then says `Free game on`, and `!EndFreeGamble` turns it off.
+- Free Game Mode is on. The strip at the top of the settings window then says `Free game on`, and `!EndFreeGamble` or the switch on the Game page turns it off.
 - Channel points are set to `Free`, or to `Reward cost` or `Fixed`, where a loss takes no points by design.
 - The `Points variable` is wrong or missing.
 ### Do different platforms have separate point balances?
