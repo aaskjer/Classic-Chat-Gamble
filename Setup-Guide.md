@@ -40,10 +40,10 @@ Hover over an option for a tooltip with the details. `Save` or `Ctrl+S` keeps yo
 ## Game
 <p align="center"><img alt="Game page" src="Assets/setup-guide/game.png"></p>
 
-- **Fairness**: five presets set the odds in one click, from `Strict`, where the house wins, to `Classic`, the defaults with rare, huge jackpots. `What really comes out` shows the chance of a jackpot, a win and a loss and what a bet of 100 brings back on average, from the five numbers as they stand. Type your own numbers and it follows.
+- **Fairness**: one slider sets the odds, from `Strict`, where the house wins, to `Classic`, the defaults with rare, huge jackpots; `Custom` is where it goes when you type your own numbers. `What really comes out` shows the chance of a jackpot, a win and a loss and what a bet of 100 brings back on average, from the five numbers as they stand. Type your own numbers and it follows.
 - **Bets and points**: Default, Minimum and Maximum bet, the points variable and the name chat uses for your points. Currency Core by StreamUP and LOYALTY POINTS by tawmae are detected on their own.
 - **Payouts**: the Subscriber and VIP boosts, both Twitch only, and the cut for addicted viewers.
-- **Try a bet**: pick a bet and who plays, then click `Roll` to see exactly what chat would get. Nothing is saved, and nobody's points change.
+- **Try a bet**: pick a bet and who plays, side by side, then click `Roll` to see exactly what chat would get. Nothing is saved, and nobody's points change.
 
 ## Access
 <p align="center"><img alt="Access page" src="Assets/setup-guide/access.png"></p>

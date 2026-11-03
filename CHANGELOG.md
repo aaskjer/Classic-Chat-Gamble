@@ -17,10 +17,11 @@ shown and stored.
 - **The window is built from the game's own settings table.** The game declares every setting once and answers
   the window's request with it, so the window and the game can never disagree about a key, a default or a range
   again.
-- **The fairness presets are buttons.** Strict, House Edge, Fair, Generous and Classic fill in the five numbers;
-  the bar under them shows the chance of a jackpot, a win and a loss and what a bet of 100 comes back as, from the
-  numbers as they stand, saved or not. Type your own numbers and the bar follows. The slider's memory of your
-  custom numbers while you tried presets is gone: a preset simply replaces them, and Cancel brings them back.
+- **The Fairness slider is back.** Its stops, Strict, House Edge, Fair, Generous and Classic, fill in the five
+  numbers; type your own and it moves to Custom, or to the stop they match. The bar under it shows the chance of a
+  jackpot, a win and a loss and what a bet of 100 comes back as, from the numbers as they stand, saved or not. The
+  slider's memory of your custom numbers while you tried stops is gone: a stop simply replaces them, and Cancel
+  brings them back.
 - **Try a bet** plays a round with the settings as they stand on the page and shows the roll and the exact chat
   message, as before.
 - **A save that would not do what it looks like asks first**: Minimum above Maximum, a Default bet or Fixed bet

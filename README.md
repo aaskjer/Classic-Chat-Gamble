@@ -36,7 +36,7 @@ the bet.
 
 - 🎲 **Bets in any form.** Numbers, `all`, `half`, `quarter`, `third`, `random`, percentages like `50%` or
   shorthand like `10k`, `2.5m` and `1b`.
-- 🎰 **Jackpots.** They have their own chance and multiplier on top of a normal win. Five fairness presets set
+- 🎰 **Jackpots.** They have their own chance and multiplier on top of a normal win. One Fairness slider sets
   all the odds, or you tune each one by hand.
 - 🎫 **Channel Points on Twitch.** A reward can replace the chat command, with four bet modes: reward cost,
   typed amount, fixed or free. A redemption that does not end in a gamble is refunded. YouTube and Kick
