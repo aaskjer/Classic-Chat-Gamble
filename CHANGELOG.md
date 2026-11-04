@@ -2,6 +2,16 @@
 
 Releases are in the [release notes](https://github.com/aaskjer/Classic-Chat-Gamble/releases).
 
+## v25.1.0
+
+### Changed
+- **The settings action is UIFramework's generic stub.** `[CCG] - Settings` carries no layout and no game code any
+  more: the game action declares its window (pages, pills, the log, help and about, the `!gamble` cooldowns)
+  beside its settings table and answers the window itself (the fairness stops, the odds, a test roll, the check
+  before saving). Needs UIFramework 0.9.2 or newer; the stub fetches it.
+- **German.** With the window's language set to `de` (the pencil, then *Sprache*), every setting, section, page
+  and message of the window reads in German. The help and about pages stay English.
+
 ## v25.0.0
 
 The settings window moved into [UIFramework for streamer.bot](https://github.com/aaskjer/UIFramework-Streamer.bot),
