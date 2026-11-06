@@ -28,28 +28,35 @@ Twitch, YouTube and Kick all play. To leave a platform out, open the command and
 
 In the `Actions` tab, select `[CCG] - Settings`, right-click the `Test` trigger and click `Test Trigger`. The settings window opens.
 
-Hover over an option for a tooltip with the details. `Save` or `Ctrl+S` keeps your changes, `Save & Exit` also closes the window, and `Ctrl+1` to `Ctrl+5` switch between the pages. Changes you haven't saved yet show up in orange at the bottom. The two buttons at the bottom left switch between dark and light and reset everything to the defaults. The strip at the top tells you whether Free Game Mode is on and how viewers play, and a red `Update` pill appears there when a new version is out.
+The first time, a small dialog asks whether to download `UIFramework.dll` — the settings window itself, shared by
+all of these chat games and kept at [aaskjer/UIFramework-Streamer.bot](https://github.com/aaskjer/UIFramework-Streamer.bot).
+`Yes` fetches it (about 200 KB, checked against its published hash) into `UIFramework\lib\<version>\` next to
+Streamer.bot and opens the window. `No` opens that folder instead, for when you would rather drop the file in by
+hand from the [releases](https://github.com/aaskjer/UIFramework-Streamer.bot/releases). When a newer window is
+released the same dialog comes back once; `Cancel` skips that version.
+
+Hover over an option for a tooltip with the details. `Save` or `Ctrl+S` keeps your changes, `Save & Exit` also closes the window, and `Ctrl+1` to `Ctrl+6` switch between the pages. Changes you haven't saved yet are counted at the bottom. The buttons at the bottom left switch between dark and light, reset everything or only the page in front, and open the customise mode: rename, reorder, hide or move pages and fields by drag and drop or from their context menu, pick an accent colour, and the window keeps that layout in `uiframework.layout.json` next to the settings — through every update of the game. The strip at the top tells you whether Free Game Mode is on and how viewers play, and a pill appears there when a new version of the game is out.
 
 ## Game
 <p align="center"><img alt="Game page" src="Assets/setup-guide/game.png"></p>
 
-- **Fairness**: one slider sets the odds, from `Strict`, where the house wins, to `Classic`, the defaults with rare, huge jackpots. The bar shows the chance of a jackpot, a win and a loss, and the number above it what a bet of 100 brings back on average. Type your own numbers below the slider and it moves to `Custom`.
+- **Fairness**: one slider sets the odds, from `Strict`, where the house wins, to `Classic`, the defaults with rare, huge jackpots; `Custom` is where it goes when you type your own numbers. `What really comes out` shows the chance of a jackpot, a win and a loss and what a bet of 100 brings back on average, from the five numbers as they stand. Type your own numbers and it follows.
 - **Bets and points**: Default, Minimum and Maximum bet, the points variable and the name chat uses for your points. Currency Core by StreamUP and LOYALTY POINTS by tawmae are detected on their own.
 - **Payouts**: the Subscriber and VIP boosts, both Twitch only, and the cut for addicted viewers.
-- **Try a bet**: pick a bet and who plays, then click `Roll` to see exactly what chat would get. Nothing is saved, and nobody's points change.
+- **Try a bet**: pick a bet and who plays, side by side, then click `Roll` to see exactly what chat would get. Nothing is saved, and nobody's points change.
 
 ## Access
 <p align="center"><img alt="Access page" src="Assets/setup-guide/access.png"></p>
 
-- **How viewers play**: with `!gamble` in chat, or on Twitch with a channel point reward.
-- **Cooldown in seconds**: one for everyone, one per viewer. Saving writes them straight into the `!gamble` command.
+- **Channel points (Twitch)**: with `!gamble` in chat, or on Twitch with a channel point reward.
+- **Cooldowns**: one for everyone, one per viewer. Saving writes them straight into the `!gamble` command.
 - **Blocked and addicted viewers and groups**: type a name and press `Enter`; `×` removes it again. Blocked viewers can't play. Addicted viewers win less and get messages of their own, and `!gambleaddict` adds them from chat too.
 
 ### Twitch Channel Points
 <p align="center"><img alt="Channel points" src="Assets/setup-guide/access--channel-points.png"></p>
 
-1. Pick `Channel points`. `!gamble` is then off on Twitch, while YouTube and Kick keep using it.
-2. Paste the ID of your reward into `Reward ID`; `Find my reward ID` helps you look it up. Without one, no redemption starts a gamble.
+1. Switch on `Channel points start a gamble`. `!gamble` is then off on Twitch, while YouTube and Kick keep using it.
+2. Paste the ID of your reward into `Reward ID`; the tooltip names a page that lists your rewards with their IDs. Without one, no redemption starts a gamble.
 3. Pick what is bet:
    - `Reward cost`: the reward's price is the bet. A loss doesn't touch the viewer's points, and a win is paid in points.
    - `Typed amount`: viewers type a bet into the reward. It's paid from their own points, just like `!gamble`.
