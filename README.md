@@ -46,7 +46,8 @@ the bet.
   blocked viewers and Streamer.bot groups, and cut winnings for viewers on the addicted list.
 - ⚙️ **One settings window.** Built on [UIFramework for streamer.bot](https://github.com/aaskjer/UIFramework-Streamer.bot)
   and downloaded on first open: light and dark themes, `Try a bet`, which plays a round with your odds and shows
-  the exact chat message, and a customise mode that lets you rename, reorder and hide pages and fields.
+  the exact chat message, and a customise mode that lets you rename, reorder and hide pages and fields. Every
+  message can be edited or translated, and a daily log records every gamble and refund.
 
 ---
 
