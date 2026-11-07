@@ -49,6 +49,11 @@ the bet.
   the exact chat message, and a customise mode that lets you rename, reorder and hide pages and fields. Every
   message can be edited or translated, and a daily log records every gamble and refund.
 
+<p align="center">
+  <img src="https://github.com/aaskjer/Classic-Chat-Gamble/blob/main/Assets/readme/settings-game.png?raw=true" alt="The fairness slider and what a bet really pays" height="460">
+  <img src="https://github.com/aaskjer/Classic-Chat-Gamble/blob/main/Assets/readme/settings-messages.png?raw=true" alt="A message with its chat preview" height="460">
+</p>
+
 ---
 
 ## Credits
