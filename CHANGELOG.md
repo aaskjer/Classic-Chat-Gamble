@@ -11,6 +11,14 @@ Releases are in the [release notes](https://github.com/aaskjer/Classic-Chat-Gamb
   before saving). Needs UIFramework 0.9.2 or newer; the stub fetches it.
 - **German.** With the window's language set to `de` (the pencil, then *Sprache*), every setting, section, page
   and message of the window reads in German. The help and about pages stay English.
+- **The settings action is UIFramework's stub 0.2.0.** When the game action hangs, the settings window waits 30
+  seconds for its answer, then carries on and can be closed; before, it waited for good. A game that has not
+  described itself for a minute no longer locks the settings until Streamer.bot restarts: the next run opens the
+  window.
+- The host block is UIFramework's current one (0.10.0). It names every type in full, so it no longer depends on the
+  action's `using` lines, and it can declare a tour of the window. Nothing changes in the window.
+- A chance, multiplier or percentage written as NaN or infinity into `configs.json` still falls back the way it did;
+  the new host block alone would read it as 0.
 
 ## v25.0.0
 
