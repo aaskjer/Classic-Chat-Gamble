@@ -13,6 +13,8 @@ Releases are in the [release notes](https://github.com/aaskjer/Classic-Chat-Gamb
   offers the new framework on its next open.
 
 ### Changed
+- **Fixed bet only in Fixed mode.** *Fixed bet* under Channel points shows while the bet mode is *Fixed*;
+  before, it stood there greyed out in the other modes.
 - **The settings action is UIFramework's generic stub.** `[CCG] - Settings` carries no layout and no game code any
   more: the game action declares its window (pages, pills, the log, help and about, the `!gamble` cooldowns)
   beside its settings table and answers the window itself (the fairness stops, the odds, a test roll, the check
