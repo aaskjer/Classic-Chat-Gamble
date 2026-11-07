@@ -4,13 +4,37 @@ Releases are in the [release notes](https://github.com/aaskjer/Classic-Chat-Gamb
 
 ## v25.1.0
 
+### Added
+
+- **A tour of the settings window.** The first time the window opens, a short tour rings one part after the other
+  (the pages, saving, the customise mode) and says what it does; the **?** at the top right shows it again.
+- **UIFramework 1.0.0.** Problems the window finds sit behind a red **i** in its header instead of on the About or
+  Log page, and *How to play*, *Log* and *About* sit together at the foot of the page list. The settings action
+  offers the new framework on its next open.
+
 ### Changed
+- **The chat messages are in `configs.json`.** Every setting now sits in one file, as in the other games. An old
+  `messages.json` moves in on the first run of the game or of the settings window: each message goes into
+  `configs.json` under its new name (one set to null becomes an empty message, which still sends nothing), and the
+  file stays beside it as `messages.json.migrated`.
+- When the window opens on the numbers of another fairness stop, the slider moves there without a *filled in*
+  note in the footer; the note is for a stop you pick.
+- **Fixed bet only in Fixed mode.** *Fixed bet* under Channel points shows while the bet mode is *Fixed*;
+  before, it stood there greyed out in the other modes.
 - **The settings action is UIFramework's generic stub.** `[CCG] - Settings` carries no layout and no game code any
   more: the game action declares its window (pages, pills, the log, help and about, the `!gamble` cooldowns)
   beside its settings table and answers the window itself (the fairness stops, the odds, a test roll, the check
   before saving). Needs UIFramework 0.9.2 or newer; the stub fetches it.
 - **German.** With the window's language set to `de` (the pencil, then *Sprache*), every setting, section, page
   and message of the window reads in German. The help and about pages stay English.
+- **The settings action is UIFramework's stub 0.2.0.** When the game action hangs, the settings window waits 30
+  seconds for its answer, then carries on and can be closed; before, it waited for good. A game that has not
+  described itself for a minute no longer locks the settings until Streamer.bot restarts: the next run opens the
+  window.
+- The host block is UIFramework's current one (1.0.0). It names every type in full, so it no longer depends on the
+  action's `using` lines, and it can declare a tour of the window. Nothing changes in the window.
+- A chance, multiplier or percentage written as NaN or infinity into `configs.json` still falls back the way it did;
+  the new host block alone would read it as 0.
 
 ## v25.0.0
 
