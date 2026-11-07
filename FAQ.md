@@ -4,7 +4,7 @@ Import the [import string](https://github.com/aaskjer/Classic-Chat-Gamble/blob/m
 ### Which version of Streamer.bot is required?
 The latest public version is always recommended.
 ### Where are the config files?
-In your Streamer.bot folder under `Chat Games\Classic Chat Gamble`: `configs.json` holds the settings, `messages.json` the chat messages, `uiframework.layout.json` your layout of the window (theme, renamed or hidden pages and fields). The window itself is `UIFramework\lib\<version>\UIFramework.dll` next to Streamer.bot, downloaded on first open.
+In your Streamer.bot folder under `Chat Games\Classic Chat Gamble`: `configs.json` holds the settings and the chat messages, `uiframework.layout.json` your layout of the window (theme, renamed or hidden pages and fields). The window itself is `UIFramework\lib\<version>\UIFramework.dll` next to Streamer.bot, downloaded on first open.
 ### What is UIFramework.dll, and why does the window want to download something?
 The settings window is no longer part of the import. It lives in [UIFramework for streamer.bot](https://github.com/aaskjer/UIFramework-Streamer.bot), one window shared by all of these chat games, so a fix or a new feature there reaches every game at once. The `[CCG] - Settings` action only loads that DLL and hands it the game's settings table.
 The first open asks before fetching anything. `Yes` downloads the file from the UIFramework releases, checks it against the SHA-256 published next to it and puts it in `UIFramework\lib\<version>\` under your Streamer.bot folder. `No` opens that folder so you can place the file yourself. Later releases are offered the same way; `Cancel` skips one, and `"autoUpdate": false` in `uiframework.layout.json` stops the check altogether. If the log says `UIFramework.dll was not found`, open the window again and answer `Yes`, or put the DLL from the [releases](https://github.com/aaskjer/UIFramework-Streamer.bot/releases) into that folder by hand.
@@ -15,7 +15,7 @@ The circular arrow at the bottom left resets every page, the half arrow only the
 ### What if a settings file is damaged?
 The settings window still opens: a damaged `configs.json` falls back to the `.bak` beside it, or to the defaults, and is kept as a `.broken` copy; saving writes a fresh one. The game does the same, so a gamble never fails on a damaged file.
 ### I updated and configs.json looks different.
-Its keys are camelCase since 25.0.0 (`freeGame`, `minBet`, `jackpotPercent`). Your old file is read through aliases, and the first save writes the new names; nothing is lost. `messages.json` is unchanged.
+Its keys are camelCase since 25.0.0 (`freeGame`, `minBet`, `jackpotPercent`). Your old file is read through aliases, and the first save writes the new names; nothing is lost. Since 25.1.0 the chat messages are in `configs.json` too: an old `messages.json` is moved in on the first run and kept as `messages.json.migrated`.
 
 # Points & Currency
 ### Which loyalty point systems are supported?
@@ -81,7 +81,7 @@ The notice goes to each viewer only once, with their first gamble.
 ### What's the difference between the global and the user cooldown?
 The global cooldown (`Everyone`) pauses the game for all viewers, the user cooldown (`Per viewer`) only for the viewer who just played.
 ### Why isn't the cooldown message showing up?
-The message is empty, `messages.json` is damaged, or no cooldown is running.
+The message is empty, or no cooldown is running.
 ### Do cooldowns apply across platforms?
 No, Streamer.bot runs the command cooldown for each platform on its own. Channel point redemptions keep a separate clock with the same durations.
 
@@ -117,7 +117,7 @@ Open an issue [here](https://github.com/aaskjer/Classic-Chat-Gamble/issues).
 
 # Messages
 ### How do I customize the win, loss and jackpot messages?
-On the Messages page of the settings window, or directly in `messages.json`.
+On the Messages page of the settings window, or directly in `configs.json`.
 ### Which placeholders can I use?
 The Messages page lists them under each message; hover over one to see what it stands for, click it to insert it.
 ### Can I use emojis in messages?

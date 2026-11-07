@@ -13,6 +13,12 @@ Releases are in the [release notes](https://github.com/aaskjer/Classic-Chat-Gamb
   offers the new framework on its next open.
 
 ### Changed
+- **The chat messages are in `configs.json`.** Every setting now sits in one file, as in the other games. An old
+  `messages.json` moves in on the first run of the game or of the settings window: each message goes into
+  `configs.json` under its new name (one set to null becomes an empty message, which still sends nothing), and the
+  file stays beside it as `messages.json.migrated`.
+- When the window opens on the numbers of another fairness stop, the slider moves there without a *filled in*
+  note in the footer; the note is for a stop you pick.
 - **Fixed bet only in Fixed mode.** *Fixed bet* under Channel points shows while the bet mode is *Fixed*;
   before, it stood there greyed out in the other modes.
 - **The settings action is UIFramework's generic stub.** `[CCG] - Settings` carries no layout and no game code any
