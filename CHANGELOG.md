@@ -4,6 +4,14 @@ Releases are in the [release notes](https://github.com/aaskjer/Classic-Chat-Gamb
 
 ## v25.1.0
 
+### Added
+
+- **A tour of the settings window.** The first time the window opens, a short tour rings one part after the other
+  (the pages, saving, the customise mode) and says what it does; the **?** at the top right shows it again.
+- **UIFramework 1.0.0.** Problems the window finds sit behind a red **i** in its header instead of on the About or
+  Log page, and *How to play*, *Log* and *About* sit together at the foot of the page list. The settings action
+  offers the new framework on its next open.
+
 ### Changed
 - **The settings action is UIFramework's generic stub.** `[CCG] - Settings` carries no layout and no game code any
   more: the game action declares its window (pages, pills, the log, help and about, the `!gamble` cooldowns)
@@ -15,7 +23,7 @@ Releases are in the [release notes](https://github.com/aaskjer/Classic-Chat-Gamb
   seconds for its answer, then carries on and can be closed; before, it waited for good. A game that has not
   described itself for a minute no longer locks the settings until Streamer.bot restarts: the next run opens the
   window.
-- The host block is UIFramework's current one (0.10.0). It names every type in full, so it no longer depends on the
+- The host block is UIFramework's current one (1.0.0). It names every type in full, so it no longer depends on the
   action's `using` lines, and it can declare a tour of the window. Nothing changes in the window.
 - A chance, multiplier or percentage written as NaN or infinity into `configs.json` still falls back the way it did;
   the new host block alone would read it as 0.
