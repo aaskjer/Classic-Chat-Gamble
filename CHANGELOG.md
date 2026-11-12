@@ -2,6 +2,47 @@
 
 Releases are in the [release notes](https://github.com/aaskjer/Classic-Chat-Gamble/releases).
 
+## v25.2.2 - 2026-11-12
+
+### Added
+
+- **aaskjer on Twitch** is back among the links of the About page.
+
+### Changed
+
+- **The update question says when Streamer.bot needs a restart.** A newer UIFramework can be used at once only
+  while none is running in your Streamer.bot; otherwise it takes effect after a restart. The dialog now says which
+  of the two it is, and after such a download a note says it again: restart when it suits you, everything goes on
+  as before until then.
+- **Closing the update question means "not now".** *Yes* takes the new UIFramework, *No* skips that version, and
+  *Cancel*, the X and Esc ask again at the next open. Closing the dialog used to skip the version for good.
+- **A skipped version is skipped in every game.** It is kept once, in `UIFramework\loader.json` beside
+  Streamer.bot, and so is `"autoUpdate": false`. What a game's `uiframework.layout.json` holds is still read.
+- **Free Game Mode leaves the Default bet alone.** `!SetFreeGamble` no longer sets it to 0 and `!EndFreeGamble` has
+  nothing to bring back, so the commands and the switch on the Game page do the same; a free game never used the
+  Default bet anyway. A Default bet an older version set to 0 comes back with the next `!EndFreeGamble`.
+- The settings action is 0.3.1, the host block UIFramework 1.9.0's. Nothing in your settings changes.
+
+### Fixed
+
+- **A damaged `configs.json` no longer costs your settings.** The game played on the `.bak` beside it, but
+  `!SetFreeGamble`, `!EndFreeGamble` and `!gambleaddict` then wrote a file with nothing but their own four values,
+  and every other setting was back at its default. They now write the `.bak`'s settings with their change, and the
+  damaged file is kept as `configs.json.broken`.
+- **Free Game Mode switched in the window and in chat keeps the Default bet.** Switched on in the window and ended
+  with `!EndFreeGamble`, it brought back a Default bet from long ago; started with `!SetFreeGamble` and switched off
+  in the window, it stayed 0.
+- **`!gamble random` stays within the Minimum and Maximum bet.** It picked anything up to the balance and was
+  refused whenever that was outside them.
+- **A refused bet does not hold up the next one.** A `!gamble` whose bet doesn't work no longer starts the cooldown,
+  so the viewer can try again at once.
+- **The check before saving warns at exactly 100 %, too.** A jackpot and a win chance that add up to 100 % never lose
+  either.
+- **A download GitHub does not deliver is tried three times** before the settings action gives up.
+- **No answer from the game shows as no answer.** A Try button said "done" and a table showed as empty when the
+  game action did not answer.
+- **A late answer is not taken for the next one.** Every request to the game has a variable of its own.
+
 ## v25.2.1 - 2026-11-12
 
 ### Fixed
