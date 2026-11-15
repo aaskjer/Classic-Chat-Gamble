@@ -2,6 +2,37 @@
 
 Releases are in the [release notes](https://github.com/aaskjer/Classic-Chat-Gamble/releases).
 
+## v25.2.3 - 2026-11-15
+
+### Added
+
+- **French and Brazilian Portuguese.** The settings window comes in English, German, Spanish, French and Brazilian
+  Portuguese (the pencil, then *Language*). In Spanish, French and Portuguese the buttons, the pages and the
+  settings all UIFramework games share are translated; the odds, the game's own messages and *How to play* stay
+  English. German still covers every setting and message.
+- **Blocked groups and Addicted groups suggest your Streamer.bot groups.** Click into the field and the groups not
+  added yet show below it; typing narrows the list, Enter or a click adds one.
+
+### Changed
+
+- The settings action is 0.3.2, the host block UIFramework 2.0.0's; the window offers UIFramework 2.0.0 at its
+  next open. Nothing in your settings changes.
+
+### Fixed
+
+- **A gamble during a save plays on your settings.** For a moment while the window saves, `configs.json` is being
+  swapped, and a `!gamble` that came then played on the defaults. It now waits for the saved file, or reads the
+  `.bak`.
+- **A Fairness stop picked just before saving is saved.** Its numbers could arrive while the game checked the
+  settings; the window said *Saved* and the file kept the old ones. Slid across several stops, the slider now keeps
+  the numbers of the stop it ends on.
+- **The Log page** shows gambles of the same second newest first, and its folder button opens `Chat Games\Logs`
+  beside Streamer.bot, also after an export to another folder.
+- **A UIFramework too new for this game no longer locks the window.** The update notice at Streamer.bot's start
+  loaded the newest one installed, also one another game had brought for a newer settings action, and the window
+  then failed at every start. It now loads one that fits. The notice no longer names a version you skipped with
+  *No*, and a damaged `UIFramework.dll` is set aside and offered again even while an older one runs.
+
 ## v25.2.2 - 2026-11-12
 
 ### Added
